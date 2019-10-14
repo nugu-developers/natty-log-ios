@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'NattyLog_Example' do
+  pod 'NattyLog', :path => '../'
+end
