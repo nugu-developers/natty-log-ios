@@ -25,7 +25,9 @@ public struct NattyConfiguration {
     public var prefix: String?
     public var outputMethod: OutputMethod
     
-    public static let `default` = NattyConfiguration()
+    public static var `default`: NattyConfiguration {
+        return NattyConfiguration()
+    }
     
     public init(
         minLogLevel: LogLevel = .debug,
