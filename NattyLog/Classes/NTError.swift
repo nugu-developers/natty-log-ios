@@ -20,7 +20,9 @@
 
 import Foundation
 
+/// `NTError` is the error type returned by `then` closure in `Natty`.
 public enum NTError: Error {
+    /// attempting to print log, the log-level was too low.
     case logLevelTooLow
 }
 
