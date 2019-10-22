@@ -18,18 +18,24 @@
 //  limitations under the License.
 //
 
+/// Enumeration on the output method for printing log. 
+///
+/// - Note: One of the `NuguConfiguration`.
 public enum OutputMethod {
     
-    /// If you use nslog method in Foundation, logMessage is seperated each 500 characters.
-    /// Because using nslog is available maximum 1024 bytes
+    /// Using `.nslog` method, logMessage is seperated each 500 characters.
+    ///
+    /// - Note: `NSLog` is printing log available maximum 1024 bytes.
+    /// - Warning: Be careful when using characters longer than 3bytes
+    ///            because we calculated the maximum 2bytes per character.
     case nslog
     
-    /// If you use print method in Swift, Can't see logMessage by device console
+    /// Using `.print` method, Cannot see logMessage by device console
     ///
-    /// Recommend using by debug mode with Xcode
+    /// - Note: Recommend using by debug mode with Xcode
     case print
     
-    /// If you want to use custom method, implement using closure. (like to save log file without print)
+    /// Using `custom` method, implement by closure. (like to save log file without print)
     /// Also, you can use custom format by closure's `String` type argument (Not recommended)
     case custom(closure: (String?) -> Void)
 }
