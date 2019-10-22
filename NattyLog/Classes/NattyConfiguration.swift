@@ -18,15 +18,33 @@
 //  limitations under the License.
 //
 
+/// A configuration struct that defines behavior for printing log.
 public struct NattyConfiguration {
+    /// A minimum level for printing log.
     public var minLogLevel: LogLevel
+    /// A maximum level for log's description.
     public var maxDescriptionLevel: LogLevel
+    /// A persona shown according to the requested level for printing log.
     public var showPersona: Bool
+    /// A prefix in log.
     public var prefix: String?
+    /// The method for printing log.
     public var outputMethod: OutputMethod
     
+    /// A configuration value for default.
     public static let `default` = NattyConfiguration()
     
+    /// Creates custom `NattyConfiguration` each environment.
+    /// - Parameter minLogLevel: A minimum level for printing log.
+    ///                          Default value is `.debug`.
+    /// - Parameter maxDescriptionLevel: A maximum level for log's description.
+    ///                                  Default value is `.nothing`.
+    /// - Parameter isShowPersona: A persona shown according to the requested level for printing log.
+    ///                            Default value is `true`.
+    /// - Parameter prefix: A prefix in log.
+    ///                     Default value is `nil`.
+    /// - Parameter outputMethod: The method for printing log.
+    ///                           Default value is `.nslog`.
     public init(
         minLogLevel: LogLevel = .debug,
         maxDescriptionLevel: LogLevel = .nothing,
