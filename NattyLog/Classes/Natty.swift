@@ -21,13 +21,28 @@
 import Foundation
 
 public class Natty {
+    /// Configuration for `Natty` instance.
     public var configuration: NattyConfiguration
     
+    /// Creates a `Natty` from a `NattyConfiguration`.
+    ///
+    /// - Note: Recommend using that change the `configuration` according to your build environment.
+    /// - Parameter configuration: A `configuration` value that specifies contain behaviors,
+    ///                            such as minimum level for logging, setting prefix.
+    ///                            Default value is `NattyConfiguration.default`
     public init(by configuration: NattyConfiguration = NattyConfiguration.default) {
         self.configuration = configuration
     }
     
-    /// Print for debug
+    /// Print log when `minloglevel` in `configuration` is lower than or equal to `debug`.
+    /// - Parameter message: A message to print. called immediately because it is an autoclosure type.
+    /// - Parameter file: A filename that called print. Default value is `#file`.
+    /// - Parameter function: A function that called print. Default value is `#function`.
+    /// - Parameter line: A code line that called print. Default value is `#line`.
+    /// - Parameter then: Call this closure after success or fail to print log.
+    ///                   It is called synchronous.
+    ///                   If success to print log, receive `String?` type of `message` converted from `Any?` type.
+    ///                   If failure to print log, receive `NTError`.
     public func debug(
         _ message: @autoclosure () -> Any?,
         file: String = #file,
@@ -43,7 +58,15 @@ public class Natty {
             then: then)
     }
     
-    /// Print for information
+    /// Print log when `minloglevel` in `configuration` is lower than or equal to `info`.
+    /// - Parameter message: A message to print. called immediately because it is an autoclosure type.
+    /// - Parameter file: A filename that called print. Default value is `#file`.
+    /// - Parameter function: A function that called print. Default value is `#function`.
+    /// - Parameter line: A code line that called print. Default value is `#line`.
+    /// - Parameter then: Call this closure after success or fail to print log.
+    ///                   It is called synchronous.
+    ///                   If success to print log, receive `String?` type of `message` converted from `Any?` type.
+    ///                   If failure to print log, receive `NTError`.
     public func info(
         _ message: @autoclosure () -> Any?,
         file: String = #file,
@@ -59,7 +82,15 @@ public class Natty {
             then: then)
     }
     
-    /// Print for warning
+    /// Print log when `minloglevel` in `configuration` is lower than or equal to `warning`.
+    /// - Parameter message: A message to print. called immediately because it is an autoclosure type.
+    /// - Parameter file: A filename that called print. Default value is `#file`.
+    /// - Parameter function: A function that called print. Default value is `#function`.
+    /// - Parameter line: A code line that called print. Default value is `#line`.
+    /// - Parameter then: Call this closure after success or fail to print log.
+    ///                   It is called synchronous.
+    ///                   If success to print log, receive `String?` type of `message` converted from `Any?` type.
+    ///                   If failure to print log, receive `NTError`.
     public func warning(
         _ message: @autoclosure () -> Any?,
         file: String = #file,
@@ -75,7 +106,15 @@ public class Natty {
             then: then)
     }
     
-    /// Print for error
+    /// Print log when `minloglevel` in `configuration` is lower than or equal to `error`.
+    /// - Parameter message: A message to print. called immediately because it is an autoclosure type.
+    /// - Parameter file: A filename that called print. Default value is `#file`.
+    /// - Parameter function: A function that called print. Default value is `#function`.
+    /// - Parameter line: A code line that called print. Default value is `#line`.
+    /// - Parameter then: Call this closure after success or fail to print log.
+    ///                   It is called synchronous.
+    ///                   If success to print log, receive `String?` type of `message` converted from `Any?` type.
+    ///                   If failure to print log, receive `NTError`.
     public func error(
         _ message: @autoclosure () -> Any?,
         file: String = #file,
