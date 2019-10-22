@@ -30,9 +30,11 @@ public struct NattyConfiguration {
     public var prefix: String?
     /// The method for printing log.
     public var outputMethod: OutputMethod
-    
+  
     /// A configuration value for default.
-    public static let `default` = NattyConfiguration()
+    public static var `default`: NattyConfiguration {
+        return NattyConfiguration()
+    }
     
     /// Creates custom `NattyConfiguration` each environment.
     /// - Parameter minLogLevel: A minimum level for printing log.
