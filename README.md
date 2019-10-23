@@ -6,11 +6,6 @@
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 ![License](https://img.shields.io/github/license/nugu-developers/natty-log-ios)
 
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 - iOS 10.0+
 - Xcode 10.2+
