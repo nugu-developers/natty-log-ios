@@ -172,9 +172,10 @@ private extension Natty {
         }
         
         let messageValue = message()
-        if let errorMessage = (messageValue as? LocalizedError)?.errorDescription, errorMessage.count > 0 {
+        
+        if let errorMessage = (messageValue as? LocalizedError)?.errorDescription, errorMessage.isEmpty == false {
             logMessage.append(errorMessage)
-        } else if let descriptionMessage = (messageValue as? CustomStringConvertible)?.description, descriptionMessage.count > 0 {
+        } else if let descriptionMessage = (messageValue as? CustomStringConvertible)?.description, descriptionMessage.isEmpty == false {
             logMessage.append(descriptionMessage)
         } else {
             logMessage.append(messageValue.debugDescription)
@@ -202,7 +203,7 @@ private extension Natty {
             startIndex = endIndex
         }
         
-        let logMessages = results.map{ String($0) }
-        logMessages.forEach{ NSLog("%@", $0) }
+        let logMessages = results.map { String($0) }
+        logMessages.forEach { NSLog("%@", $0) }
     }
 }
