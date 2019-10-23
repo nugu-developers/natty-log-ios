@@ -4,7 +4,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/NattyLog)](https://github.com/nugu-developers/natty-log-ios)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
-[![License](https://img.shields.io/github/license/nugu-developers/natty-log-ios)]
+![License](https://img.shields.io/github/license/nugu-developers/natty-log-ios)
 
 
 ## Example
