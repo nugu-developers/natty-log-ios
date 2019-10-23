@@ -1,0 +1,7 @@
+# NattyLog document generator jazzy settings
+
+copyright: Copyright 2019 SK Telecom Co., Ltd.
+author: Yonghoon Kwon
+xcodebuild_arguments: [-target, NattyLog-iOS]
+clean: true
+output: ./Documentation

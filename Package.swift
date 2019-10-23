@@ -23,15 +23,26 @@ import PackageDescription
 let package = Package(  
     name: "NattyLog",
     platforms: [
-        .iOS(.v10)
+        .iOS(.v10),
+        .tvOS(.v10),
+        .watchOS(.v3),
+        .macOS(.v10_12)
     ],
     products: [
-        .library(name: "NattyLog", targets: ["NattyLog"]),
+        .library(
+            name: "NattyLog", 
+            targets: ["NattyLog"]
+        ),
     ],
     targets: [
         .target(
             name: "NattyLog",
-            path: "NattyLog")
+            path: "Sources")
+        .testTarget(
+            name: "NattyLogTests",
+            dependencies: ["NattyLog"],
+            path: "Tests"
+        ),
     ],
     swiftLanguageVersions: [
         .v5

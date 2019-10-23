@@ -3,7 +3,7 @@
    LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
-      parallelizeBuildables = "NO"
+      parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "NattyLog_Example.app"
-               BlueprintName = "NattyLog_Example"
-               ReferencedContainer = "container:NattyLog.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "NattyLog_Tests.xctest"
-               BlueprintName = "NattyLog_Tests"
+               BlueprintIdentifier = "3D9C428F22745894000A6585"
+               BuildableName = "NattyLog.framework"
+               BlueprintName = "NattyLog-iOS"
                ReferencedContainer = "container:NattyLog.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,15 +26,18 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "NattyLog_Tests.xctest"
-               BlueprintName = "NattyLog_Tests"
+               BlueprintIdentifier = "3D9C42F02274604A000A6585"
+               BuildableName = "NattyLog-iOSTests.xctest"
+               BlueprintName = "NattyLog-iOSTests"
                ReferencedContainer = "container:NattyLog.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,14 +45,16 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "NattyLog_Example.app"
-            BlueprintName = "NattyLog_Example"
+            BlueprintIdentifier = "3D9C428F22745894000A6585"
+            BuildableName = "NattyLog.framework"
+            BlueprintName = "NattyLog-iOS"
             ReferencedContainer = "container:NattyLog.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
+      <CodeCoverageTargets>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -75,16 +66,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "NattyLog_Example.app"
-            BlueprintName = "NattyLog_Example"
+            BlueprintIdentifier = "3D9C428F22745894000A6585"
+            BuildableName = "NattyLog.framework"
+            BlueprintName = "NattyLog-iOS"
             ReferencedContainer = "container:NattyLog.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,16 +84,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "NattyLog_Example.app"
-            BlueprintName = "NattyLog_Example"
+            BlueprintIdentifier = "3D9C428F22745894000A6585"
+            BuildableName = "NattyLog.framework"
+            BlueprintName = "NattyLog-iOS"
             ReferencedContainer = "container:NattyLog.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
