@@ -23,7 +23,7 @@ import NattyLog
 
 // MARK: - Const for app
 
-internal let AppLog = SampleApp.natty
+let log = SampleApp.natty
 
 struct SampleApp {
     /**

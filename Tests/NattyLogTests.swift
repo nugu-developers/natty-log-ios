@@ -10,9 +10,9 @@
 import XCTest
 
 class NattyLogTests: XCTestCase {
-    
+
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
     
     func testExample() {}

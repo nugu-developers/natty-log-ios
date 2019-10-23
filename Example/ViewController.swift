@@ -40,15 +40,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logLevelLabel.text = AppLog.configuration.minLogLevel.name
-        logLevelStepper.value = Double(LogLevelBound.lower(level: (AppLog.configuration.minLogLevel)).value)
+        logLevelLabel.text = log.configuration.minLogLevel.name
+        logLevelStepper.value = Double(LogLevelBound.lower(level: (log.configuration.minLogLevel)).value)
         
-        descriptionLevelLabel.text = AppLog.configuration.maxDescriptionLevel.name
-        descriptionLevelStepper.value = Double(LogLevelBound.upper(level: AppLog.configuration.maxDescriptionLevel).value)
+        descriptionLevelLabel.text = log.configuration.maxDescriptionLevel.name
+        descriptionLevelStepper.value = Double(LogLevelBound.upper(level: log.configuration.maxDescriptionLevel).value)
         
-        personaSegmentedControl.selectedSegmentIndex = AppLog.configuration.showPersona ? 0 : 1
+        personaSegmentedControl.selectedSegmentIndex = log.configuration.showPersona ? 0 : 1
         
-        switch AppLog.configuration.outputMethod {
+        switch log.configuration.outputMethod {
         case .nslog:
             outputMethodSegmentedControl.selectedSegmentIndex = 0
         case .print:
@@ -66,7 +66,7 @@ extension ViewController {
         let logLevelValue = Int(stepper.value)
         guard let logLevel = LogLevelBound.lowerLevel(value: logLevelValue) else { return }
         
-        AppLog.configuration.minLogLevel = logLevel
+        log.configuration.minLogLevel = logLevel
         
         logLevelLabel.text = logLevel.name
     }
@@ -75,39 +75,39 @@ extension ViewController {
         let descriptionLevelValue = Int(stepper.value)
         guard let logDescriptionLevel = LogLevelBound.upperLevel(value: descriptionLevelValue) else { return }
         
-        AppLog.configuration.maxDescriptionLevel = logDescriptionLevel
+        log.configuration.maxDescriptionLevel = logDescriptionLevel
         
         descriptionLevelLabel.text = logDescriptionLevel.name
     }
     
     @IBAction private func personaSegmenetedControlDidChange(_ segmentedControl: UISegmentedControl) {
-        AppLog.configuration.showPersona = segmentedControl.selectedSegmentIndex == 0 ? true : false
+        log.configuration.showPersona = segmentedControl.selectedSegmentIndex == 0 ? true : false
     }
     
     @IBAction private func prefixConfirmButtonClick(_ button: UIButton) {
-        AppLog.configuration.prefix = prefixTextField.text
+        log.configuration.prefix = prefixTextField.text
     }
     
     @IBAction private func outputMethodSegmentedControlDidChange(_ segmentedControl: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            AppLog.configuration.outputMethod = .nslog
+            log.configuration.outputMethod = .nslog
         case 1:
-            AppLog.configuration.outputMethod = .print
+            log.configuration.outputMethod = .print
         case 2:
-            AppLog.configuration.outputMethod = .custom(closure: { (message) in
+            log.configuration.outputMethod = .custom(closure: { (message) in
                 print("Print: " + (message ?? "nil"))
                 NSLog("NSLog: " + (message ?? "nil"))
             })
         default:
-            AppLog.configuration.outputMethod = .custom(closure: { (message) in
+            log.configuration.outputMethod = .custom(closure: { (message) in
                 return
             })
         }
     }
     
     @IBAction private func debugButtonClick(_ button: UIButton) {
-        AppLog.debug(logTextField.text) { [weak self] (result) in
+        log.debug(logTextField.text) { [weak self] (result) in
             // If you want to send(or save) log message, you can use this closure
             // Also, You can skip this closure
             switch result {
@@ -120,7 +120,7 @@ extension ViewController {
     }
     
     @IBAction private func infoButtonClick(_ button: UIButton) {
-        AppLog.info(logTextField.text) { [weak self] (result) in
+        log.info(logTextField.text) { [weak self] (result) in
             // If you want to send(or save) log message, you can use this closure
             // Also, You can skip this closure
             switch result {
@@ -133,7 +133,7 @@ extension ViewController {
     }
     
     @IBAction private func warningButtonClick(_ button: UIButton) {
-        AppLog.warning(logTextField.text) { [weak self] (result) in
+        log.warning(logTextField.text) { [weak self] (result) in
             // If you want to send(or save) log message, you can use this closure
             // Also, You can skip this closure
             
@@ -147,7 +147,7 @@ extension ViewController {
     }
     
     @IBAction private func errorButtonClick(_ button: UIButton) {
-        AppLog.error(logTextField.text) { [weak self] (result) in
+        log.error(logTextField.text) { [weak self] (result) in
             // If you want to send(or save) log message, you can use this closure
             // Also, You can skip this closure
             
