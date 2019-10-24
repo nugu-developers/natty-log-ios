@@ -37,7 +37,8 @@ let package = Package(
     targets: [
         .target(
             name: "NattyLog",
-            path: "Sources")
+            path: "Sources"
+        ),
         .testTarget(
             name: "NattyLogTests",
             dependencies: ["NattyLog"],
