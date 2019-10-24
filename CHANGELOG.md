@@ -3,7 +3,7 @@ Released on 2019-10-24.
 
 #### Added
 - Support code-level documentation.
-    - Added in Pull Request [#3](https://github.com/nugu-developers/natty-log-ios/pulls?q=is%3Apr+is%3Aclosed)
+    - Added in Pull Request [#3](https://github.com/nugu-developers/natty-log-ios/pull/3)
 
 #### Fixed
 - The `default` value in `NattyConfiguration` is no longer static constant.
