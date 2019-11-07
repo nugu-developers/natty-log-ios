@@ -5,6 +5,7 @@
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/NattyLog)](https://github.com/nugu-developers/natty-log-ios)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 ![License](https://img.shields.io/github/license/nugu-developers/natty-log-ios)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/37a7a2e77cf542eb9a6dad0546eb7a15)](https://www.codacy.com/manual/nugu-dev-sdk/natty-log-ios?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nugu-developers/natty-log-ios&amp;utm_campaign=Badge_Grade)
 
 ## Requirements
 - iOS 10.0+
