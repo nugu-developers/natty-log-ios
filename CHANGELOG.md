@@ -1,3 +1,9 @@
+# 1.1.1
+Released on 2020-02-27.
+
+#### Fixed
+- Fixes memory leak issue [#28](https://github.com/nugu-developers/natty-log-ios/pull/28)
+
 # 1.1.0
 Released on 2019-10-24.
 
