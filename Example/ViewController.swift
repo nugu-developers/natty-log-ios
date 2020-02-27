@@ -40,6 +40,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        logTextField.delegate = self
+        
         logLevelLabel.text = log.configuration.minLogLevel.name
         logLevelStepper.value = Double(LogLevelBound.lower(level: (log.configuration.minLogLevel)).value)
         
@@ -170,5 +172,13 @@ private extension ViewController {
         logOutputTextView.text.append(contentsOf: "\(logMessage)\n")
         let bottomRange = NSMakeRange(logOutputTextView.text.count - 1, 1)
         logOutputTextView.scrollRangeToVisible(bottomRange)
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
 }
