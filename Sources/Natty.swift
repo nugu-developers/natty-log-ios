@@ -197,13 +197,17 @@ private extension Natty {
         var startIndex = logMessage.startIndex
         var results = [Substring]()
         
-        while startIndex < logMessage.endIndex {
-            let endIndex = logMessage.index(startIndex, offsetBy: 500, limitedBy: logMessage.endIndex) ?? logMessage.endIndex
-            results.append(logMessage[startIndex..<endIndex])
-            startIndex = endIndex
+        // Used `mainQueue` because memory leak issued by `stdlib:createTLS`
+        DispatchQueue.main.async {
+            while startIndex < logMessage.endIndex {
+                let endIndex = logMessage.index(startIndex, offsetBy: 500, limitedBy: logMessage.endIndex) ?? logMessage.endIndex
+                results.append(logMessage[startIndex..<endIndex])
+                startIndex = endIndex
+            }
+
+            results
+                .map { String($0) }
+                .forEach { NSLog("%@", $0) }
         }
-        
-        let logMessages = results.map { String($0) }
-        logMessages.forEach { NSLog("%@", $0) }
     }
 }
