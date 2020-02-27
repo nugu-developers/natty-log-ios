@@ -25,7 +25,7 @@ pod 'NattyLog'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate NattyLog into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "nugu-developers/natty-log-ios" "1.1.0"
+github "nugu-developers/natty-log-ios" "1.1.1"
 ```
 
 Then run `carthage update`.
@@ -36,7 +36,7 @@ To integrate using Apple's Swift package manager, add the following as a depende
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/nugu-developers/natty-log-ios.git", from: "1.1.0")
+    .package(url: "https://github.com/nugu-developers/natty-log-ios.git", from: "1.1.1")
 ]
 ```
 

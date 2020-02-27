@@ -939,7 +939,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-iOS";
 				PRODUCT_NAME = NattyLog;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -970,7 +970,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-iOS";
 				PRODUCT_NAME = NattyLog;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -999,7 +999,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-tvOS";
 				PRODUCT_NAME = NattyLog;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1030,7 +1030,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-tvOS";
 				PRODUCT_NAME = NattyLog;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1061,7 +1061,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-watchOS";
 				PRODUCT_NAME = NattyLog;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1092,7 +1092,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-watchOS";
 				PRODUCT_NAME = NattyLog;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1126,7 +1126,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-macOS";
 				PRODUCT_NAME = NattyLog;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1158,7 +1158,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-macOS";
 				PRODUCT_NAME = NattyLog;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1295,6 +1295,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-iOS-Example";
 				PRODUCT_NAME = "iOS-Example";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1316,6 +1317,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sktelecom.romaine.NattyLog-iOS-Example";
 				PRODUCT_NAME = "iOS-Example";
 				PROVISIONING_PROFILE_SPECIFIER = "";
