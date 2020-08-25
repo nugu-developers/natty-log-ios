@@ -24,6 +24,8 @@ public class Natty {
     /// Configuration for `Natty` instance.
     public var configuration: NattyConfiguration
     
+    public static weak var delegate: NattyDelegate?
+    
     /// Creates a `Natty` from a `NattyConfiguration`.
     ///
     /// - Note: Recommend using that change the `configuration` according to your build environment.
@@ -189,6 +191,8 @@ private extension Natty {
         case .custom(let closure):
             closure(logMessage)
         }
+        
+        Natty.delegate?.nattyDidPrint(logMessage: logMessage)
         
         then?(.success(logMessage))
     }

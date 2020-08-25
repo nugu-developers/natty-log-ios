@@ -35,6 +35,7 @@
 		1FBB96062360475D0080E9E6 /* NattyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB96042360475C0080E9E6 /* NattyLog.swift */; };
 		1FBB96072360475D0080E9E6 /* NattyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB96042360475C0080E9E6 /* NattyLog.swift */; };
 		1FBB96082360475D0080E9E6 /* NattyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB96042360475C0080E9E6 /* NattyLog.swift */; };
+		1FD5D1A024F4D5E9007BA384 /* NattyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5D19F24F4D5E9007BA384 /* NattyDelegate.swift */; };
 		3D9C42F62274604A000A6585 /* NattyLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9C429022745894000A6585 /* NattyLog.framework */; };
 		3D9C42FC22746078000A6585 /* NattyLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C42D722745CDE000A6585 /* NattyLogTests.swift */; };
 		3D9C43062274611B000A6585 /* NattyLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9C42A92274599D000A6585 /* NattyLog.framework */; };
@@ -104,6 +105,7 @@
 		1FBB95FF2360181A0080E9E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1FBB960123601D140080E9E6 /* SampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleApp.swift; sourceTree = "<group>"; };
 		1FBB96042360475C0080E9E6 /* NattyLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NattyLog.swift; sourceTree = "<group>"; };
+		1FD5D19F24F4D5E9007BA384 /* NattyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NattyDelegate.swift; sourceTree = "<group>"; };
 		3D9C429022745894000A6585 /* NattyLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NattyLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9C429C227458E8000A6585 /* NattyLog.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NattyLog.plist; sourceTree = "<group>"; };
 		3D9C429D227458E8000A6585 /* NattyLogTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NattyLogTests.plist; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				1FBB95E3236017BC0080E9E6 /* NTError.swift */,
 				1FBB95E0236017BC0080E9E6 /* OutputMethod.swift */,
 				1FBB95E4236017BC0080E9E6 /* String+URL.swift */,
+				1FD5D19F24F4D5E9007BA384 /* NattyDelegate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FBB95F1236017BC0080E9E6 /* NTError.swift in Sources */,
+				1FD5D1A024F4D5E9007BA384 /* NattyDelegate.swift in Sources */,
 				1FBB96052360475D0080E9E6 /* NattyLog.swift in Sources */,
 				1FBB95E9236017BC0080E9E6 /* Natty.swift in Sources */,
 				1FBB95F5236017BC0080E9E6 /* String+URL.swift in Sources */,
