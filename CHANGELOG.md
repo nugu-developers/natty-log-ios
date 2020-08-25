@@ -1,3 +1,9 @@
+# 1.2.0
+Released on 2020-08-25.
+
+#### Added
+- Adds `NattyDelegate` protocol.
+
 # 1.1.1
 Released on 2020-02-27.
 
