@@ -40,6 +40,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Natty.delegate = self
+        
         logTextField.delegate = self
         
         logLevelLabel.text = log.configuration.minLogLevel.name
@@ -175,10 +177,23 @@ private extension ViewController {
     }
 }
 
+// MARK: - UITextFieldDelegate
+
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
+        return true
+    }
+}
+
+// MARK: - NattyDelegate
+
+extension ViewController: NattyDelegate {
+    func nattyWillPrint(logMessage: String?, logLevel: LogLevel) -> Bool {
+        guard logLevel != .debug else { return false }
+        
+        print("delegated: \(logMessage ?? "none")")
         return true
     }
 }

@@ -24,6 +24,7 @@ public class Natty {
     /// Configuration for `Natty` instance.
     public var configuration: NattyConfiguration
     
+    // Use `delegate` when printing directly. It must be used only in the endpoint (application).
     public static weak var delegate: NattyDelegate?
     
     /// Creates a `Natty` from a `NattyConfiguration`.
@@ -183,6 +184,13 @@ private extension Natty {
             logMessage.append(messageValue.debugDescription)
         }
         
+        let isDelegated = Natty.delegate?.nattyWillPrint(logMessage: logMessage, logLevel: level)
+        
+        guard isDelegated == false else {
+            then?(.success(logMessage))
+            return
+        }
+        
         switch configuration.outputMethod {
         case .nslog:
             printByNSLog(logMessage: logMessage)
@@ -191,8 +199,6 @@ private extension Natty {
         case .custom(let closure):
             closure(logMessage)
         }
-        
-        Natty.delegate?.nattyDidPrint(logMessage: logMessage)
         
         then?(.success(logMessage))
     }
