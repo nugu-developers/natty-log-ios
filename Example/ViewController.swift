@@ -190,7 +190,7 @@ extension ViewController: UITextFieldDelegate {
 // MARK: - NattyDelegate
 
 extension ViewController: NattyDelegate {
-    func nattyWillPrint(logMessage: String?, logLevel: LogLevel) -> Bool {
+    func nattyShouldDelegate(logMessage: String?, logLevel: LogLevel) -> Bool {
         guard logLevel != .debug else { return false }
         
         print("delegated: \(logMessage ?? "none")")

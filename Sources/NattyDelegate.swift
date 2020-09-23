@@ -25,5 +25,5 @@ public protocol NattyDelegate: class {
     /// - Parameter logMessage: The `logMessage` that `NattyLog` will print
     /// - Parameter logLevel: The `logLevel` is the level for printing log.
     /// - Returns: Return `true` when the delegated `logMessage` is directly output.
-    func nattyWillPrint(logMessage: String?, logLevel: LogLevel) -> Bool
+    func nattyShouldDelegate(logMessage: String?, logLevel: LogLevel) -> Bool
 }

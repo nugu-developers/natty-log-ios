@@ -184,9 +184,9 @@ private extension Natty {
             logMessage.append(messageValue.debugDescription)
         }
         
-        let isDelegated = Natty.delegate?.nattyWillPrint(logMessage: logMessage, logLevel: level)
+        let isDelegated = Natty.delegate?.nattyShouldDelegate(logMessage: logMessage, logLevel: level)
         
-        guard isDelegated == false else {
+        guard isDelegated == false || isDelegated == nil else {
             then?(.success(logMessage))
             return
         }
