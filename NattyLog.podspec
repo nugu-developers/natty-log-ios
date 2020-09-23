@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'NattyLog'
-  s.version = '1.2.0'
+  s.version = '1.2.1'
   s.license = 'Apache License, Version 2.0'
   s.summary = 'Log util in iOS'
   s.homepage = 'https://github.com/nugu-developers/natty-log-ios'
