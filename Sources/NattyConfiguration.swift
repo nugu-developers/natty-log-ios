@@ -30,6 +30,8 @@ public struct NattyConfiguration {
     public var prefix: String?
     /// The method for printing log.
     public var outputMethod: OutputMethod
+    /// Make output using delegate.
+    public var usingDelegate: Bool
   
     /// A configuration value for default.
     public static var `default`: NattyConfiguration {
@@ -47,17 +49,21 @@ public struct NattyConfiguration {
     ///                     Default value is `nil`.
     /// - Parameter outputMethod: The method for printing log.
     ///                           Default value is `.nslog`.
+    /// - Parameter usingDelegate: Make output using delegate.
+    ///                            Default value is `true`.
     public init(
         minLogLevel: LogLevel = .debug,
         maxDescriptionLevel: LogLevel = .nothing,
         showPersona isShowPersona: Bool = true,
         prefix: String? = nil,
-        outputMethod: OutputMethod = .nslog
+        outputMethod: OutputMethod = .nslog,
+        usingDelegate: Bool = true
         ) {
         self.minLogLevel = minLogLevel
         self.maxDescriptionLevel = maxDescriptionLevel
         self.showPersona = isShowPersona
         self.prefix = prefix
         self.outputMethod = outputMethod
+        self.usingDelegate = usingDelegate
     }
 }
