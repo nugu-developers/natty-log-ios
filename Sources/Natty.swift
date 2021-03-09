@@ -184,11 +184,13 @@ private extension Natty {
             logMessage.append(messageValue.debugDescription)
         }
         
-        let isDelegated = Natty.delegate?.nattyShouldDelegate(logMessage: logMessage, logLevel: level)
+        if configuration.usingDelegate == true {
+            let isDelegated = Natty.delegate?.nattyShouldDelegate(logMessage: logMessage, logLevel: level)
         
-        guard isDelegated == false || isDelegated == nil else {
-            then?(.success(logMessage))
-            return
+            guard isDelegated == false || isDelegated == nil else {
+                then?(.success(logMessage))
+                return
+            }
         }
         
         switch configuration.outputMethod {
