@@ -1,4 +1,8 @@
 # 1.2.2
+Released on 2021-07-27.
+- Fix build errors and warnings
+
+# 1.2.2
 Released on 2021-03-09.
 - Updates `usingDelegate` option. [#35](https://github.com/nugu-developers/natty-log-ios/pull/35)
 
