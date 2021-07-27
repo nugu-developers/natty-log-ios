@@ -20,7 +20,7 @@
 
 import Foundation
 
-public protocol NattyDelegate: class {
+public protocol NattyDelegate: AnyObject {
     /// It is delegated the log message that `NattyLog` will print.
     /// - Parameter logMessage: The `logMessage` that `NattyLog` will print
     /// - Parameter logLevel: The `logLevel` is the level for printing log.
