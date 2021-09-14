@@ -1,4 +1,4 @@
-# 1.2.2
+# 1.2.3
 Released on 2021-07-27.
 - Fix build errors and warnings
 
